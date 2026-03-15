@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function App() {
+export default function Upload() {
   const [file, setFile] = useState<File | null>(null);
   const [progress, setProgress] = useState(0);
   const [success, setSuccess] = useState(false);
@@ -30,11 +30,11 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       
       <div className="bg-white p-8 rounded-xl shadow-lg w-96 text-center">
 
-        <h1 className="text-2xl font-bold mb-4">Upload MP4 Video</h1>
+        <h1 className="text-2xl font-bold mb-4">Upload Video</h1>
 
         <label className="border-2 border-dashed border-gray-400 p-6 block rounded-lg cursor-pointer hover:bg-gray-50">
           <input
@@ -78,5 +78,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
